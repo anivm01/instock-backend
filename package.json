@@ -4,8 +4,11 @@
   "description": "instock brainstation project",
   "main": "server.js",
   "scripts": {
-    "start": "npx nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "npx nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "knex migrate:latest",
+    "db:seed": "knex seed:run"
   },
   "author": "timbits team",
   "license": "ISC",
@@ -15,6 +18,8 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "knex": "^2.3.0",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
     "uuid": "^9.0.0"
   }

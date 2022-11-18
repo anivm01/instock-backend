@@ -3,8 +3,8 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const warehousesRoutes = require("./Routes/warehouses.js");
-const inventoriesRoutes = require("./Routes/inventories.js");
+const warehousesRoutes = require("./routes/warehouseRoutes.js");
+const inventoriesRoutes = require("./routes/inventoryRoutes.js");
 let PORT = process.env.PORT;
 
 
@@ -12,7 +12,6 @@ app.use(cors());
 
 app.use(express.json());
 
-//linked the warehouse routes
 app.use("/warehouses", warehousesRoutes);
 app.use("/inventories", inventoriesRoutes);
 
